@@ -5,8 +5,8 @@
 
 void printStudentInfo() {
     setlocale(LC_ALL, "Russian");
-    std::cout << "Student: ×åêóøèí Ìàêñèì Àðòåìîâè÷ " << std::endl;
-    std::cout << "Group: Ì1Î-137ÁÂ-25" << std::endl;
+    std::cout << "Student: Ð§ÐµÐºÑƒÑˆÐ¸Ð½ ÐœÐ°ÐºÑÐ¸Ð¼ ÐÑ€Ñ‚ÐµÐ¼Ð¾Ð²Ð¸Ñ‡ " << std::endl;
+    std::cout << "Group: Ðœ10-137Ð‘Ð’-25" << std::endl;
     std::cout << "Task: task_4" << std::endl;
 }
 
@@ -69,38 +69,39 @@ int main() {
 
     setlocale(LC_ALL, "Russian");
 
-    std::cout << "Ââåäèòå ðàçìåðû ïåðâîé ìàòðèöû:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñ‹ Ð¿ÐµÑ€Ð²Ð¾Ð¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹: " << std::endl;
     std::cout << std::endl;
-    std::cout << "Êîëè÷åñòâî ñòðîê: ";
+    std::cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº: ";
     std::cin >> rows1;
-    std::cout << "Êîëè÷åñòâî ñòîëáöîâ: ";
+    std::cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²: ";
     std::cin >> cols1;
 
-    std::cout << "\nÂâåäèòå ðàçìåðû âòîðîé ìàòðèöû:" << std::endl;
+    std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñ‹ Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹:" << std::endl;
     std::cout << std::endl;
-    std::cout << "Êîëè÷åñòâî ñòðîê: ";
+    std::cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº: ";
     std::cin >> rows2;
-    std::cout << "Êîëè÷åñòâî ñòîëáöîâ: ";
+    std::cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²: ";
     std::cin >> cols2;
 
     if (cols1 != rows2) {
-        std::cerr << "Îøèáêà: êîëè÷åñòâî ñòîëáöîâ ïåðâîé ìàòðèöû (" << cols1
-            << ") äîëæíî ðàâíÿòüñÿ êîëè÷åñòâó ñòðîê âòîðîé ìàòðèöû (" << rows2 << ")" << std::endl;
+        std::cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°: ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð² Ð¿ÐµÑ€Ð²Ð¾Ð¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ (" << cols1
+            << ") Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ñ€Ð°Ð²Ð½ÑÑ‚ÑŒÑÑ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ñƒ ÑÑ‚Ñ€Ð¾Ðº Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ (" << rows2 << ")" << std::endl;
         return 1;
     }
 
     auto matrix1 = fillMatrix(rows1, cols1);
     auto matrix2 = fillMatrix(rows2, cols2);
 
-    std::cout << "\nÏåðâàÿ ìàòðèöà:" << std::endl;
+    std::cout << "\nÐŸÐµÑ€Ð²Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:" << std::endl;
     printMatrix(matrix1);
 
-    std::cout << "Âòîðàÿ ìàòðèöà:" << std::endl;
+    std::cout << "Ð’Ñ‚Ð¾Ñ€Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:" << std::endl;
     printMatrix(matrix2);
 
     auto result = multiplyMatrices(matrix1, matrix2);
 
-    std::cout << "Ðåçóëüòàò óìíîæåíèÿ ìàòðèö:" << std::endl;
+    std::cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ ÑƒÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†:" << std::endl;
     printMatrix(result);
+
 
 }
