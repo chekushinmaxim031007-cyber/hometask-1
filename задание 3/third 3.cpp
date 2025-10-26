@@ -5,8 +5,8 @@
 
 void printStudentInfo() {
     setlocale(LC_ALL, "Russian");
-    std::cout << "Student: ×åêóøèí Ìàêñèì Àðòåìîâè÷ " << std::endl;
-    std::cout << "Group: Ì1Î-137ÁÂ-25" << std::endl;
+    std::cout << "Student: Ð§ÐµÐºÑƒÑˆÐ¸Ð½ ÐœÐ°ÐºÑÐ¸Ð¼ ÐÑ€Ñ‚ÐµÐ¼Ð¾Ð²Ð¸Ñ‡ " << std::endl;
+    std::cout << "Group: ÃŒ1ÃŽ-137ÃÃ‚-25" << std::endl;
     std::cout << "Task: task_3" << std::endl;
 }
 
@@ -63,20 +63,21 @@ int main() {
     printStudentInfo();
 
     setlocale(LC_ALL, "Russian");
-    std::cout << "Ââåäèòå êîëè÷åñòâî ñòðîê: ";
+    std::cout << " Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº: ";
     std::cin >> rows;
 
-    std::cout << "Ââåäèòå êîëè÷åñòâî ñòîëáöîâ: ";
+    std::cout << " Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²: ";
     std::cin >> columns;
 
     auto matrix = fillMatrix(rows, columns);
 
-    std::cout << "Èñõîäíàÿ ìàòðèöà:" << std::endl;
+    std::cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:" << std::endl;
     printMatrix(matrix);
 
     auto transposed = transposeMatrix(matrix);
 
-    std::cout << "Òðàíñïîíèðîâàííàÿ ìàòðèöà:" << std::endl;
+    std::cout << "Ð¢Ñ€Ð°Ð½ÑÐ¿Ð¾Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:" << std::endl;
     printMatrix(transposed);
+
 
 }
