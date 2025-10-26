@@ -5,7 +5,7 @@
 void printStudentInfo() {
     setlocale(LC_ALL, "Russian");
     std::cout << "Student: Чекушин Максим Артемович " << std::endl;
-    std::cout << "Group: Ì1Î-137ÁÂ-25" << std::endl;
+    std::cout << "Group: М10-137БВ-25" << std::endl;
     std::cout << "Task: task_1" << std::endl;
 }
 
@@ -37,4 +37,5 @@ int main() {
 
     return 0;
 }
+
 
